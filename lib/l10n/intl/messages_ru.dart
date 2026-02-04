@@ -267,6 +267,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "create": MessageLookupByLibrary.simpleMessage("Создать"),
     "createTicket": MessageLookupByLibrary.simpleMessage("Создать тикет"),
     "creationTime": MessageLookupByLibrary.simpleMessage("Время создания"),
+    "currentLabel": MessageLookupByLibrary.simpleMessage("Текущая"),
     "currentPassword": MessageLookupByLibrary.simpleMessage("Текущий пароль"),
     "cut": MessageLookupByLibrary.simpleMessage("Вырезать"),
     "dark": MessageLookupByLibrary.simpleMessage("Темный"),

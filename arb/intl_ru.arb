@@ -546,5 +546,5 @@
   "used": "Использован",
   "security": "Безопасность",
   "activeSessions": "Активные сессии",
-  "current": "Текущая"
+  "currentLabel": "Текущая"
 }

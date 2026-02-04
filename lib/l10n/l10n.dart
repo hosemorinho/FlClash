@@ -4204,7 +4204,10 @@ class AppLocalizations {
     );
   }
 
-  // skipped getter for the 'current' key
+  /// `Current`
+  String get currentLabel {
+    return Intl.message('Current', name: 'currentLabel', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

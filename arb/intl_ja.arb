@@ -538,5 +538,5 @@
   "used": "使用済み",
   "security": "セキュリティ",
   "activeSessions": "アクティブセッション",
-  "current": "現在"
+  "currentLabel": "現在"
 }

@@ -199,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "create": MessageLookupByLibrary.simpleMessage("作成"),
     "createTicket": MessageLookupByLibrary.simpleMessage("チケット作成"),
     "creationTime": MessageLookupByLibrary.simpleMessage("作成時間"),
+    "currentLabel": MessageLookupByLibrary.simpleMessage("現在"),
     "currentPassword": MessageLookupByLibrary.simpleMessage("現在のパスワード"),
     "cut": MessageLookupByLibrary.simpleMessage("切り取り"),
     "dark": MessageLookupByLibrary.simpleMessage("ダーク"),

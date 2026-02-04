@@ -537,5 +537,5 @@
   "used": "Used",
   "security": "Security",
   "activeSessions": "Active Sessions",
-  "current": "Current"
+  "currentLabel": "Current"
 }

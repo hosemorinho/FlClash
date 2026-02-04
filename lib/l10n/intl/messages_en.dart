@@ -260,6 +260,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "create": MessageLookupByLibrary.simpleMessage("Create"),
     "createTicket": MessageLookupByLibrary.simpleMessage("Create Ticket"),
     "creationTime": MessageLookupByLibrary.simpleMessage("Creation time"),
+    "currentLabel": MessageLookupByLibrary.simpleMessage("Current"),
     "currentPassword": MessageLookupByLibrary.simpleMessage("Current Password"),
     "cut": MessageLookupByLibrary.simpleMessage("Cut"),
     "dark": MessageLookupByLibrary.simpleMessage("Dark"),

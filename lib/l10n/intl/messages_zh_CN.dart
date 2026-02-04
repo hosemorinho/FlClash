@@ -179,6 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "create": MessageLookupByLibrary.simpleMessage("创建"),
     "createTicket": MessageLookupByLibrary.simpleMessage("创建工单"),
     "creationTime": MessageLookupByLibrary.simpleMessage("创建时间"),
+    "currentLabel": MessageLookupByLibrary.simpleMessage("当前"),
     "currentPassword": MessageLookupByLibrary.simpleMessage("当前密码"),
     "cut": MessageLookupByLibrary.simpleMessage("剪切"),
     "dark": MessageLookupByLibrary.simpleMessage("深色"),

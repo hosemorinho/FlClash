@@ -538,5 +538,5 @@
   "used": "已使用",
   "security": "安全",
   "activeSessions": "活跃会话",
-  "current": "当前"
+  "currentLabel": "当前"
 }

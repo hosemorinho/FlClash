@@ -177,7 +177,7 @@ class _ProfileSettingsViewState extends ConsumerState<ProfileSettingsView> {
                       trailing: session.isCurrent
                           ? Chip(
                               label: Text(
-                                appLocalizations.current,
+                                appLocalizations.currentLabel,
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: colorScheme.onPrimaryContainer,
