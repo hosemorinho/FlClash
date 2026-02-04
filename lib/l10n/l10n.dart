@@ -3748,6 +3748,463 @@ class AppLocalizations {
   String get delayTest {
     return Intl.message('Delay Test', name: 'delayTest', desc: '', args: []);
   }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message('Register', name: 'register', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message('Logout', name: 'logout', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
+
+  /// `Forgot Password`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password reset successfully`
+  String get resetPasswordSuccess {
+    return Intl.message(
+      'Password reset successfully',
+      name: 'resetPasswordSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Password`
+  String get currentPassword {
+    return Intl.message(
+      'Current Password',
+      name: 'currentPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get changePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed successfully`
+  String get changePasswordSuccess {
+    return Intl.message(
+      'Password changed successfully',
+      name: 'changePasswordSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Verify Code`
+  String get emailVerifyCode {
+    return Intl.message(
+      'Email Verify Code',
+      name: 'emailVerifyCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Code`
+  String get sendVerifyCode {
+    return Intl.message(
+      'Send Code',
+      name: 'sendVerifyCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification code sent`
+  String get emailVerifySent {
+    return Intl.message(
+      'Verification code sent',
+      name: 'emailVerifySent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invite Code`
+  String get inviteCode {
+    return Intl.message('Invite Code', name: 'inviteCode', desc: '', args: []);
+  }
+
+  /// `Account Info`
+  String get accountInfo {
+    return Intl.message(
+      'Account Info',
+      name: 'accountInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balance`
+  String get balance {
+    return Intl.message('Balance', name: 'balance', desc: '', args: []);
+  }
+
+  /// `Subscription`
+  String get subscription {
+    return Intl.message(
+      'Subscription',
+      name: 'subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Services`
+  String get services {
+    return Intl.message('Services', name: 'services', desc: '', args: []);
+  }
+
+  /// `Support`
+  String get support {
+    return Intl.message('Support', name: 'support', desc: '', args: []);
+  }
+
+  /// `Purchase`
+  String get purchase {
+    return Intl.message('Purchase', name: 'purchase', desc: '', args: []);
+  }
+
+  /// `My Orders`
+  String get myOrders {
+    return Intl.message('My Orders', name: 'myOrders', desc: '', args: []);
+  }
+
+  /// `Server Nodes`
+  String get serverNodes {
+    return Intl.message(
+      'Server Nodes',
+      name: 'serverNodes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tickets`
+  String get tickets {
+    return Intl.message('Tickets', name: 'tickets', desc: '', args: []);
+  }
+
+  /// `Knowledge Base`
+  String get knowledge {
+    return Intl.message(
+      'Knowledge Base',
+      name: 'knowledge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invite`
+  String get invite {
+    return Intl.message('Invite', name: 'invite', desc: '', args: []);
+  }
+
+  /// `Profile Settings`
+  String get profileSettings {
+    return Intl.message(
+      'Profile Settings',
+      name: 'profileSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Period`
+  String get selectPeriod {
+    return Intl.message(
+      'Select Period',
+      name: 'selectPeriod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message('Monthly', name: 'monthly', desc: '', args: []);
+  }
+
+  /// `Quarterly`
+  String get quarterly {
+    return Intl.message('Quarterly', name: 'quarterly', desc: '', args: []);
+  }
+
+  /// `Half Yearly`
+  String get halfYearly {
+    return Intl.message('Half Yearly', name: 'halfYearly', desc: '', args: []);
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message('Yearly', name: 'yearly', desc: '', args: []);
+  }
+
+  /// `Two Years`
+  String get twoYears {
+    return Intl.message('Two Years', name: 'twoYears', desc: '', args: []);
+  }
+
+  /// `Three Years`
+  String get threeYears {
+    return Intl.message('Three Years', name: 'threeYears', desc: '', args: []);
+  }
+
+  /// `One Time`
+  String get oneTime {
+    return Intl.message('One Time', name: 'oneTime', desc: '', args: []);
+  }
+
+  /// `Reset Traffic`
+  String get resetTraffic {
+    return Intl.message(
+      'Reset Traffic',
+      name: 'resetTraffic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Detail`
+  String get orderDetail {
+    return Intl.message(
+      'Order Detail',
+      name: 'orderDetail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pending`
+  String get orderPending {
+    return Intl.message('Pending', name: 'orderPending', desc: '', args: []);
+  }
+
+  /// `Processing`
+  String get orderProcessing {
+    return Intl.message(
+      'Processing',
+      name: 'orderProcessing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancelled`
+  String get orderCancelled {
+    return Intl.message(
+      'Cancelled',
+      name: 'orderCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed`
+  String get orderCompleted {
+    return Intl.message(
+      'Completed',
+      name: 'orderCompleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discounted`
+  String get orderDiscounted {
+    return Intl.message(
+      'Discounted',
+      name: 'orderDiscounted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Methods`
+  String get paymentMethods {
+    return Intl.message(
+      'Payment Methods',
+      name: 'paymentMethods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment successful`
+  String get paymentSuccess {
+    return Intl.message(
+      'Payment successful',
+      name: 'paymentSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel Order`
+  String get cancelOrder {
+    return Intl.message(
+      'Cancel Order',
+      name: 'cancelOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Amount`
+  String get totalAmount {
+    return Intl.message(
+      'Total Amount',
+      name: 'totalAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Period`
+  String get period {
+    return Intl.message('Period', name: 'period', desc: '', args: []);
+  }
+
+  /// `Create Ticket`
+  String get createTicket {
+    return Intl.message(
+      'Create Ticket',
+      name: 'createTicket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subject`
+  String get ticketSubject {
+    return Intl.message('Subject', name: 'ticketSubject', desc: '', args: []);
+  }
+
+  /// `Priority Level`
+  String get ticketLevel {
+    return Intl.message(
+      'Priority Level',
+      name: 'ticketLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get ticketMessage {
+    return Intl.message('Message', name: 'ticketMessage', desc: '', args: []);
+  }
+
+  /// `Low`
+  String get levelLow {
+    return Intl.message('Low', name: 'levelLow', desc: '', args: []);
+  }
+
+  /// `Medium`
+  String get levelMedium {
+    return Intl.message('Medium', name: 'levelMedium', desc: '', args: []);
+  }
+
+  /// `High`
+  String get levelHigh {
+    return Intl.message('High', name: 'levelHigh', desc: '', args: []);
+  }
+
+  /// `Close Ticket`
+  String get closeTicket {
+    return Intl.message(
+      'Close Ticket',
+      name: 'closeTicket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commission Rate`
+  String get commissionRate {
+    return Intl.message(
+      'Commission Rate',
+      name: 'commissionRate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unused`
+  String get unused {
+    return Intl.message('Unused', name: 'unused', desc: '', args: []);
+  }
+
+  /// `Used`
+  String get used {
+    return Intl.message('Used', name: 'used', desc: '', args: []);
+  }
+
+  /// `Security`
+  String get security {
+    return Intl.message('Security', name: 'security', desc: '', args: []);
+  }
+
+  /// `Active Sessions`
+  String get activeSessions {
+    return Intl.message(
+      'Active Sessions',
+      name: 'activeSessions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'current' key
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
