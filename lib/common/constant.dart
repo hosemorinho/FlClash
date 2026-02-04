@@ -129,3 +129,7 @@ const main = (config) => {
 
 const backupDatabaseName = 'database.sqlite';
 const configJsonName = 'config.json';
+
+const authApiBaseUrl = String.fromEnvironment('AUTH_API_URL', defaultValue: '');
+const authApiPrefix = '/api/v1';
+const authTokenKey = 'auth_token';

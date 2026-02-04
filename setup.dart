@@ -373,6 +373,8 @@ class BuildCommand extends Command {
     final data = {
       'APP_ENV': env,
       if (coreSha256 != null) 'CORE_SHA256': coreSha256,
+      if (Platform.environment['AUTH_API_URL'] != null)
+        'AUTH_API_URL': Platform.environment['AUTH_API_URL'],
     };
     final envFile = File(join(current, 'env.json'))..create();
     await envFile.writeAsString(json.encode(data));

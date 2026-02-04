@@ -89,6 +89,21 @@ class Preferences {
     final sharedPreferencesIns = await sharedPreferencesCompleter.future;
     await sharedPreferencesIns?.clear();
   }
+
+  Future<String?> getAuthToken() async {
+    final preferences = await sharedPreferencesCompleter.future;
+    return preferences?.getString(authTokenKey);
+  }
+
+  Future<bool> saveAuthToken(String token) async {
+    final preferences = await sharedPreferencesCompleter.future;
+    return preferences?.setString(authTokenKey, token) ?? false;
+  }
+
+  Future<bool> clearAuthToken() async {
+    final preferences = await sharedPreferencesCompleter.future;
+    return preferences?.remove(authTokenKey) ?? false;
+  }
 }
 
 final preferences = Preferences();

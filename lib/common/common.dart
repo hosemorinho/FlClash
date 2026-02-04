@@ -1,4 +1,5 @@
 export 'app_localizations.dart';
+export 'auth_request.dart';
 export 'cache.dart';
 export 'color.dart';
 export 'compute.dart';

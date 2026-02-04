@@ -1,3 +1,4 @@
+import 'package:fl_clash/common/constant.dart';
 import 'package:fl_clash/enum/enum.dart';
 import 'package:fl_clash/models/models.dart';
 import 'package:fl_clash/views/views.dart';
@@ -71,6 +72,15 @@ class Navigation {
         label: PageLabel.tools,
         builder: (_) => const ToolsView(key: GlobalObjectKey(PageLabel.tools)),
         modes: [NavigationItemMode.desktop, NavigationItemMode.mobile],
+      ),
+      NavigationItem(
+        icon: Icon(Icons.account_circle),
+        label: PageLabel.account,
+        builder: (_) =>
+            const AccountView(key: GlobalObjectKey(PageLabel.account)),
+        modes: authApiBaseUrl.isNotEmpty
+            ? [NavigationItemMode.mobile, NavigationItemMode.desktop]
+            : [],
       ),
     ];
   }

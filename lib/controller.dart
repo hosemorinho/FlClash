@@ -12,6 +12,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'common/common.dart';
+import 'common/constant.dart';
 import 'database/database.dart';
 import 'models/models.dart';
 import 'providers/database.dart';
@@ -61,6 +62,7 @@ extension InitControllerExt on AppController {
     await _connectCore();
     await _initCore();
     await _initStatus();
+    await _initAuth();
     _ref.read(initProvider.notifier).value = true;
   }
 
@@ -197,6 +199,24 @@ extension InitControllerExt on AppController {
         title: appLocalizations.checkUpdate,
         message: TextSpan(text: appLocalizations.checkUpdateError),
       );
+    }
+  }
+}
+
+extension AuthControllerExt on AppController {
+  Future<void> _initAuth() async {
+    if (authApiBaseUrl.isEmpty) return;
+    final storedToken = await preferences.getAuthToken();
+    if (storedToken == null) return;
+    authRequest.setToken(storedToken);
+    _ref.read(authTokenProvider.notifier).value = storedToken;
+    try {
+      final user = await authRequest.getUserInfo();
+      _ref.read(authUserStateProvider.notifier).value = user;
+    } catch (_) {
+      await preferences.clearAuthToken();
+      authRequest.clearToken();
+      _ref.read(authTokenProvider.notifier).value = null;
     }
   }
 }
