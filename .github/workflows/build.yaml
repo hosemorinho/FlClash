@@ -84,6 +84,9 @@ jobs:
           flutter --version
           flutter pub get
 
+      - name: Generate i18n
+        run: flutter pub run intl_utils:generate
+
       - name: Generate Code
         run: dart run build_runner build --delete-conflicting-outputs
 
