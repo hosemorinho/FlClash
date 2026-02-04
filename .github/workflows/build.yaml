@@ -98,16 +98,34 @@ jobs:
           # Generated files are already in the checkout from the tag
 
       - name: Setup Android Signing
-        if: startsWith(matrix.platform,'android') && secrets.KEYSTORE != ''
+        if: startsWith(matrix.platform,'android')
         run: |
-          echo "${{ secrets.KEYSTORE }}" | base64 --decode > android/app/keystore.jks
-          if ! keytool -list -keystore android/app/keystore.jks -storepass "${{ secrets.STORE_PASSWORD }}" >/dev/null 2>&1; then
-            echo "::warning::Keystore is invalid, falling back to debug signing"
-            rm -f android/app/keystore.jks
-          else
+          KEYSTORE_VALID=false
+          if [ -n "${{ secrets.KEYSTORE }}" ]; then
+            echo "${{ secrets.KEYSTORE }}" | base64 --decode > android/app/keystore.jks
+            if keytool -list -keystore android/app/keystore.jks -storepass "${{ secrets.STORE_PASSWORD }}" >/dev/null 2>&1; then
+              KEYSTORE_VALID=true
+            else
+              echo "::warning::Provided keystore is invalid"
+              rm -f android/app/keystore.jks
+            fi
+          fi
+          if [ "$KEYSTORE_VALID" = true ]; then
+            echo "Using provided keystore"
             echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/local.properties
             echo "storePassword=${{ secrets.STORE_PASSWORD }}" >> android/local.properties
             echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/local.properties
+          else
+            echo "Generating self-signed keystore"
+            keytool -genkeypair -v \
+              -keystore android/app/keystore.jks \
+              -keyalg RSA -keysize 2048 -validity 36500 \
+              -alias release \
+              -storepass flclash -keypass flclash \
+              -dname "CN=FlClash, OU=FlClash, O=FlClash, L=Unknown, ST=Unknown, C=US"
+            echo "keyAlias=release" >> android/local.properties
+            echo "storePassword=flclash" >> android/local.properties
+            echo "keyPassword=flclash" >> android/local.properties
           fi
 
       - name: Setup Go
