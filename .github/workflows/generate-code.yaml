@@ -10,6 +10,9 @@ on:
       - 'lib/providers/auth.dart'
       - 'arb/*.arb'
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
