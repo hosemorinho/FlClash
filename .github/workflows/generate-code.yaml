@@ -57,3 +57,11 @@ jobs:
           git add lib/models/generated/auth.* lib/providers/generated/auth.* lib/l10n/
           git commit -m "🤖 Auto-generate Freezed and i18n files"
           git push
+
+      - name: Create Release Tag
+        if: steps.verify-changed-files.outputs.has_changes == 'true'
+        run: |
+          TAG="v0.8.92-$(date +'%Y%m%d-%H%M%S')"
+          git tag $TAG
+          git push origin $TAG
+          echo "Created tag: $TAG"
