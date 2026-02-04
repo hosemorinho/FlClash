@@ -479,6 +479,7 @@
   "addProfile": "プロファイルを追加",
   "delayTest": "遅延テスト",
   "login": "ログイン",
+  "loginFailed": "ログインに失敗しました",
   "register": "登録",
   "logout": "ログアウト",
   "email": "メールアドレス",

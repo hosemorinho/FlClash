@@ -479,6 +479,7 @@
   "addProfile": "添加配置",
   "delayTest": "延迟测试",
   "login": "登录",
+  "loginFailed": "登录失败",
   "register": "注册",
   "logout": "退出登录",
   "email": "邮箱",

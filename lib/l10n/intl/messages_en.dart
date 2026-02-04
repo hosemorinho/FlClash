@@ -490,6 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Disabling will hide the log entry",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("Login failed"),
     "logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "logs": MessageLookupByLibrary.simpleMessage("Logs"),
     "logsDesc": MessageLookupByLibrary.simpleMessage("Log capture records"),

@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:fl_clash/common/common.dart';
 import 'package:fl_clash/models/models.dart';
 import 'package:fl_clash/providers/providers.dart';
@@ -87,18 +88,22 @@ class _RegisterViewState extends ConsumerState<RegisterView> {
             : null,
       );
       final token = response.token;
-      if (token != null && token.isNotEmpty) {
-        authRequest.setToken(token);
-        await preferences.saveAuthToken(token);
-        ref.read(authTokenProvider.notifier).value = token;
-        final user = await authRequest.getUserInfo();
-        ref.read(authUserStateProvider.notifier).value = user;
-        if (mounted) Navigator.of(context).pop();
+      if (token == null || token.isEmpty) {
+        throw Exception(appLocalizations.loginFailed);
       }
+      authRequest.setToken(token);
+      await preferences.saveAuthToken(token);
+      ref.read(authTokenProvider.notifier).value = token;
+      final user = await authRequest.getUserInfo();
+      ref.read(authUserStateProvider.notifier).value = user;
+      if (mounted) Navigator.of(context).pop();
     } catch (e) {
       if (mounted) {
+        final message = e is DioException
+            ? (e.message ?? e.toString())
+            : e.toString().replaceFirst('Exception: ', '');
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.toString())),
+          SnackBar(content: Text(message)),
         );
       }
     } finally {

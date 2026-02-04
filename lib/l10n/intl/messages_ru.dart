@@ -511,6 +511,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Отключение скроет запись логов",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Войти"),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("Ошибка входа"),
     "logout": MessageLookupByLibrary.simpleMessage("Выйти"),
     "logs": MessageLookupByLibrary.simpleMessage("Логи"),
     "logsDesc": MessageLookupByLibrary.simpleMessage("Записи захвата логов"),

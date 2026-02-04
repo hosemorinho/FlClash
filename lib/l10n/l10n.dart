@@ -3754,6 +3754,12 @@ class AppLocalizations {
     return Intl.message('Login', name: 'login', desc: '', args: []);
   }
 
+  /// `Login failed`
+  String get loginFailed {
+    return Intl.message('Login failed',
+        name: 'loginFailed', desc: '', args: []);
+  }
+
   /// `Register`
   String get register {
     return Intl.message('Register', name: 'register', desc: '', args: []);

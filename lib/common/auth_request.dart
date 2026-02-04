@@ -36,6 +36,16 @@ class AuthRequest {
               error.response?.statusCode == 403) {
             clearToken();
           }
+          final responseData = error.response?.data;
+          if (responseData is Map<String, dynamic>) {
+            final message = responseData['message'] ?? responseData['errors'];
+            if (message != null) {
+              handler.next(error.copyWith(
+                message: message.toString(),
+              ));
+              return;
+            }
+          }
           handler.next(error);
         },
       ),
@@ -64,12 +74,22 @@ class AuthRequest {
     return AuthConfig.fromJson(response.data ?? {});
   }
 
+  AuthResponse _parseAuthResponse(dynamic data) {
+    if (data is String) {
+      return AuthResponse(token: data);
+    }
+    if (data is Map<String, dynamic>) {
+      return AuthResponse.fromJson(data);
+    }
+    return const AuthResponse();
+  }
+
   Future<AuthResponse> login(String email, String password) async {
     final response = await _dio.post(
       '/passport/auth/login',
       data: {'email': email, 'password': password},
     );
-    return AuthResponse.fromJson(response.data ?? {});
+    return _parseAuthResponse(response.data);
   }
 
   Future<AuthResponse> register({
@@ -87,7 +107,7 @@ class AuthRequest {
         if (emailCode != null) 'email_code': emailCode,
       },
     );
-    return AuthResponse.fromJson(response.data ?? {});
+    return _parseAuthResponse(response.data);
   }
 
   Future<void> forgotPassword({

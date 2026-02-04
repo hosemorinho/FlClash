@@ -369,6 +369,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "logcat": MessageLookupByLibrary.simpleMessage("ログキャット"),
     "logcatDesc": MessageLookupByLibrary.simpleMessage("無効化するとログエントリを非表示"),
     "login": MessageLookupByLibrary.simpleMessage("ログイン"),
+    "loginFailed":
+        MessageLookupByLibrary.simpleMessage("ログインに失敗しました"),
     "logout": MessageLookupByLibrary.simpleMessage("ログアウト"),
     "logs": MessageLookupByLibrary.simpleMessage("ログ"),
     "logsDesc": MessageLookupByLibrary.simpleMessage("ログキャプチャ記録"),

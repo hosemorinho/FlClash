@@ -478,6 +478,7 @@
   "addProfile": "Add Profile",
   "delayTest": "Delay Test",
   "login": "Login",
+  "loginFailed": "Login failed",
   "register": "Register",
   "logout": "Logout",
   "email": "Email",

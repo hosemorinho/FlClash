@@ -331,6 +331,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "logcat": MessageLookupByLibrary.simpleMessage("日志捕获"),
     "logcatDesc": MessageLookupByLibrary.simpleMessage("禁用将会隐藏日志入口"),
     "login": MessageLookupByLibrary.simpleMessage("登录"),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("登录失败"),
     "logout": MessageLookupByLibrary.simpleMessage("退出登录"),
     "logs": MessageLookupByLibrary.simpleMessage("日志"),
     "logsDesc": MessageLookupByLibrary.simpleMessage("日志捕获记录"),
